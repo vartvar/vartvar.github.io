@@ -35,10 +35,28 @@
       font-size: clamp(1rem, 2vw, 1.4rem);
       letter-spacing: 0.03em;
     }
+
+    .cursor {
+      display: inline-block;
+      width: 0.6ch;
+      margin-left: 0.05ch;
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% {
+        opacity: 1;
+      }
+      50%, 100% {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <main>Vartvar awaits The Great Zubada...</main>
+  <main>
+    Vartvar awaits The Great Zubada...<span class="cursor">█</span>
+  </main>
 </body>
 </html>
